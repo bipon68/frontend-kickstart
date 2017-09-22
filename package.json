@@ -1,0 +1,22 @@
+{
+  "name": "frontend-kickstart",
+  "version": "1.0.0",
+  "description": "Frontend starter kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beardcoder/frontend-kickstart.git"
+  },
+  "keywords": [
+    "frontend",
+    "gulp",
+    "scss",
+    "sass",
+    "toolchain"
+  ],
+  "author": "Markus Sommer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beardcoder/frontend-kickstart/issues"
+  },
+  "homepage": "https://github.com/beardcoder/frontend-kickstart#readme"
+}
