@@ -13,10 +13,17 @@
     "sass",
     "toolchain"
   ],
+  "config": {
+    "asset-dir": "./assets/",
+    "web-dir": "./web/"
+  },
   "author": "Markus Sommer",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/beardcoder/frontend-kickstart/issues"
   },
-  "homepage": "https://github.com/beardcoder/frontend-kickstart#readme"
+  "homepage": "https://github.com/beardcoder/frontend-kickstart#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
