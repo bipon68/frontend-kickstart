@@ -8,7 +8,7 @@ gulp.task('css', function () {
   return gulp.src('./assets/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass())
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css'));
