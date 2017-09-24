@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"basic.css","sourcesContent":[]}
+{"version":3,"sources":["patterns/_typografie.scss"],"names":[],"mappings":"AAAA,KACE,UAAW,KACX,YAAa,IACb,YAAa","file":"basic.css","sourcesContent":["body {\n  font-size: 16px;\n  line-height: 1.4;\n  font-family: sans-serif;\n}\n"]}
