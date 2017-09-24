@@ -1,6 +1,6 @@
 # Frontend kickstarter
 
-> kickstart your frontend by using gulp, sass/scss and webpack
+> Kickstart your frontend by using gulp, sass/scss and webpack
 
 ## Usage
 
