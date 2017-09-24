@@ -32,5 +32,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "cssclass": "^1.1.0"
   }
 }
