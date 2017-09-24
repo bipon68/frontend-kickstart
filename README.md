@@ -45,14 +45,14 @@ npm i
 Then you can build sources with
 
 ```bash
-gulp build
+npm run build
 ```
 
 
-You can run the watch task after build with
+You can run the build with a watch task for easy work
 
 ```bash
-gulp build && gulp watch
+npm run work
 ```
 
 ## License

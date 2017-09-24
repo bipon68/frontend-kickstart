@@ -2,6 +2,8 @@
   "name": "frontend-kickstart",
   "version": "1.0.0",
   "description": "Frontend starter kit",
+  "author": "Markus Sommer",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beardcoder/frontend-kickstart.git"
@@ -17,8 +19,10 @@
     "asset-dir": "./assets/",
     "web-dir": "./web/"
   },
-  "author": "Markus Sommer",
-  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "work": "./node_modules/.bin/gulp default"
+  },
   "bugs": {
     "url": "https://github.com/beardcoder/frontend-kickstart/issues"
   },
