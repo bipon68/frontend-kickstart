@@ -5,11 +5,15 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var watch = require('gulp-watch');
 var config = require('./package.json').config;
-var path = require('path');
+var fs = require('path');
+var webpack = require('webpack-stream');
+var uglify = require('gulp-uglify');
 
 var path = {
-  css_source: path.resolve(__dirname, config["asset-dir"] + 'scss/**/*.scss'),
-  css_dest: path.resolve(__dirname, config["web-dir"] + 'css/')
+  css_source: fs.resolve(__dirname, config["asset-dir"] + '/scss/**/*.scss'),
+  css_dest: fs.resolve(__dirname, config["web-dir"] + '/css/'),
+  js_source: fs.resolve(__dirname, config["asset-dir"] + '/javascript/basic.js'),
+  js_dest: fs.resolve(__dirname, config["web-dir"] + '/javascript/')
 };
 
 gulp.task('css', function () {
@@ -22,11 +26,25 @@ gulp.task('css', function () {
     .pipe(gulp.dest(path.css_dest));
 });
 
+gulp.task('js', function () {
+  return gulp.src(path.js_source)
+    .pipe(plumber())
+    .pipe(webpack({
+      output: {
+        filename: 'basic.js',
+      }
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.js_dest));
+});
+
 gulp.task('watch', function () {
-  // Endless stream mode
   watch(path.css_source, function () {
     gulp.start('css');
+  });
+  watch(path.js_source, function () {
+    gulp.start('js');
   })
 });
 
-gulp.task('default', ['css']);
+gulp.task('default', ['css', 'js']);
