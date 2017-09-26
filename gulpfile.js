@@ -8,6 +8,7 @@ var config = require('./package.json').config;
 var fs = require('path');
 var webpack = require('webpack-stream');
 var uglify = require('gulp-uglify');
+var autoprefixer = require('gulp-autoprefixer');
 
 var path = {
   css_source: fs.resolve(__dirname, config["asset-dir"] + '/scss/**/*.scss'),
@@ -21,6 +22,7 @@ gulp.task('css', function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer({browsers: ['last 2 versions']}))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(path.css_dest));
